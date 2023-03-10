@@ -16,8 +16,7 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer quantity;
-    @OneToMany
-    @JoinColumn(name = "category_id")
+    @OneToMany(mappedBy = "donation")
     private List<Category> categories = new ArrayList<>();
 
     @OneToOne
@@ -29,4 +28,68 @@ public class Donation {
     private LocalDate pickUpDate;
     private LocalTime pickUpTime;
     private String pickUpComment;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
+
+    public Institution getInstitution() {
+        return institution;
+    }
+
+    public void setInstitution(Institution institution) {
+        this.institution = institution;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public LocalDate getPickUpDate() {
+        return pickUpDate;
+    }
+
+    public void setPickUpDate(LocalDate pickUpDate) {
+        this.pickUpDate = pickUpDate;
+    }
+
+    public LocalTime getPickUpTime() {
+        return pickUpTime;
+    }
+
+    public void setPickUpTime(LocalTime pickUpTime) {
+        this.pickUpTime = pickUpTime;
+    }
+
+    public String getPickUpComment() {
+        return pickUpComment;
+    }
+
+    public void setPickUpComment(String pickUpComment) {
+        this.pickUpComment = pickUpComment;
+    }
 }
