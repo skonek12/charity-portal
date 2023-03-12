@@ -8,6 +8,6 @@ import pl.coderslab.charity.category.Category;
 @Repository
 public interface DonationRepository extends JpaRepository<Donation,Long> {
 
-//    @Query(value = "SELECT sum(quantity) FROM Donation")
-//    public Long sumQuantity();
+    @Query(value = "SELECT sum(quantity) FROM Donation")
+    public Long sumQuantity();
 }
