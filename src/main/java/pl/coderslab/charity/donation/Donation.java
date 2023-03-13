@@ -16,10 +16,10 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer quantity;
-    @OneToMany(mappedBy = "donation")
+    @ManyToMany(mappedBy = "donation") //////do poprawy
     private List<Category> categories = new ArrayList<>();
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "institution_id")
     private Institution institution;
 

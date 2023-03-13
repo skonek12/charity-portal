@@ -1443,7 +1443,7 @@ header nav ul li:last-of-type {
 
 /* line 57, scss/modules/homepage-sections/_help.scss */
 .help--slides-items .col:last-child {
-  text-align: right;
+  text-align: center;
 }
 
 /* line 61, scss/modules/homepage-sections/_help.scss */
@@ -1461,6 +1461,7 @@ header nav ul li:last-of-type {
 .help--slides-items .col:last-child:after {
   float: right;
 }
+
 
 /* line 77, scss/modules/homepage-sections/_help.scss */
 .help--slides-items .col .title {
